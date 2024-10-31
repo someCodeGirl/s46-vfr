@@ -1,0 +1,167 @@
+@layer base {
+	:root {
+		--black: #0d0d0d;
+		--white: #ffffff;
+		--grey: #8f8e8e;
+		--lightBlue: #a0dbf2;
+		--blue: #5bcefa;
+		--lightPink: #f2c9d4;
+		--pink: #f5a9b8;
+		--main: "Montserrat", sans-serif;
+		--heading: "EB Garamond", serif;
+		--base-size: 1.167rem;
+		--scale: 1.2;
+		--h1: calc(var(--h2) * var(--scale));
+		--h2: calc(var(--h3) * var(--scale));
+		--h3: calc(var(--h4) * var(--scale));
+		--h4: calc(var(--h5) * var(--scale));
+		--h5: calc(var(--h6) * var(--scale));
+		--h6: var(--base-size);
+	}
+	body {
+		font-family: var(--main);
+		margin: 0;
+		padding: 0;
+		font-size: var(--base-size);
+		line-height: 1.5;
+		background-color: var(--black);
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--heading);
+	}
+	h1 {
+		font-size: var(--h1);
+	}
+	h2 {
+		font-size: var(--h2);
+	}
+	h3 {
+		font-size: var(--h3);
+	}
+	h4 {
+		font-size: var(--h4);
+	}
+	h5 {
+		font-size: var(--h5);
+	}
+	h6 {
+		font-size: var(--h6);
+	}
+	a {
+		color: var(--pink);
+	}
+	a:hover {
+		text-decoration: none;
+		color: var(--blue);
+	}
+	img {
+		max-width: 100%;
+	}
+	figure {
+		padding: 0;
+		margin: 0;
+	}
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+	.colors {
+		display: flex;
+		gap: 20px;
+	}
+	.colors > * {
+		width: 50px;
+		height: 50px;
+		border: 1px solid black;
+	}
+	.black {
+		background-color: var(--black);
+	}
+	.white {
+		background-color: var(--white);
+	}
+	.grey {
+		background-color: var(--grey);
+	}
+	.lightBlue {
+		background-color: var(--lightBlue);
+	}
+	.blue {
+		background-color: var(--blue);
+	}
+	.lightPink {
+		background-color: var(--lightPink);
+	}
+	.pink {
+		background-color: var(--pink);
+	}
+	.gradient-trans {
+		background: rgb(91, 207, 250);
+		background: linear-gradient(
+			90deg,
+			rgba(91, 207, 250, 1) 0%,
+			rgba(245, 171, 185, 1) 20%,
+			rgba(245, 171, 185, 1) 35%,
+			rgba(255, 255, 255, 1) 45%,
+			rgba(255, 255, 255, 1) 55%,
+			rgba(245, 171, 185, 1) 65%,
+			rgba(245, 171, 185, 1) 80%,
+			rgba(91, 207, 250, 1) 100%
+		);
+		height: 4px;
+	}
+	/* border box */
+	html {
+		box-sizing: border-box;
+	}
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}
+	/* h/t Scott O'Hara https://css-tricks.com/inclusively-hidden/ */
+	.sr-only:not(:focus):not(:active) {
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+}
+@layer header {
+        header {
+                text-align: center;
+                color: var(--pink);
+        }
+}
+@layer body {
+        .body {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 1rem;
+                color: var(--white);
+                text-align: center;
+        }
+        .body ul {
+                text-align: left;
+        }
+
+}
+@layer footer {
+	footer {
+		text-align: center;
+		font-family: var(--body);
+		color: var(--white);
+	}
+        footer img {
+		width: 16px;
+	}
+}
